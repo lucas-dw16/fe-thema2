@@ -64,6 +64,15 @@ Gebruikers helpen om hun schoolwerk beter te plannen, zodat ze minder stress heb
 
 ## 7. Voortgangsupdates
 
+### Opdracht 1: App-idee
+
+Resultaat:
+
+1. Project gekozen: School Planner
+2. Doel bepaald: Scholieren helpen hun schoolwerk beter in te plannen
+3. Basisfuncties vastgesteld: Taaktoevoeging, dashboard, filters op vak
+4. Doelgroep gedefinieerd: Middelbar onderwijs tot hoger onderwijs
+
 ### Opdracht 2: React Navigation Drawer
 
 Resultaat:
@@ -125,11 +134,12 @@ Wat is aangepast:
 6. React Navigation Bottom gemaakt met 3 tabs: Home, Instellingen, Profiel
 7. React Navigation Stack gemaakt met 3 schermen
 8. Nieuwszoekmachine met NewsAPI gebouwd op het Home-scherm
+9. Stack Navigation gekozen
 
 Volgende stap:
 
-1. Kleine verbeteringen aan UI en content van de schermen
-2. Reflectie-sectie aanvullen op het einde van de opdracht
+1. Screenshots van Opdracht 6 toevoegen (home, zoeken, instellingen, profiel)
+2. Reflectie-secties aanvullen op het einde van de opdracht
 
 ## 8. Logboek (wat en waarom)
 
@@ -141,6 +151,7 @@ Volgende stap:
 | 2026-03-31 | Bottom Navigation toegevoegd met Home, Instellingen en Profiel | Voldoen aan opdracht 3 (React Navigation Bottom) |
 | 2026-03-31 | Stack Navigation toegevoegd met Home, Instellingen en Profiel | Voldoen aan opdracht 4 (React Navigation Stack) |
 | 2026-03-31 | NewsAPI zoekfunctie toegevoegd met axios en flatlistt | Voldoen aan opdracht 5 (Nieuwszoekmachine API) |
+| 2026-03-31 | Stack Navigation gekozen | Voldoen aan opdracht 6 (Navigatie-keuze) |
 
 
 
@@ -187,7 +198,41 @@ Opdracht 5: Nieuwszoekmachine API
 
 2. Instellingen-scherm: ![alt text](image-2.png)
 3. Profiel-scherm:![alt text](image-3.png)
-4. Korte video: 
+4. Korte video: <video controls src="20260331-2003-33.0394093.mp4" title="Title"></video>
+
+
+Opdracht 6: Navigatie
+
+**Gekozen navigatie: Stack Navigation**
+
+De app gebruikt **Stack Navigation**. Je schermen worden op elkaar gestapeld, zoals een stapel papier. Dit is goed voor deze app omdat:
+
+1. **Je kan teruggaan**: Je gaat stap voor stap van Zoeken -> Resultaten _> Instellingen ->> Terug
+2. **Terug-knop**: Met een  terug knop kom je makkelijk terug waar je vandaan kwam
+3. **Logische volgorde**: Een scherm na het ander op een makkelijke manier
+4. **Elk scherm zijn eigen titel**: Elk scherm ziet er anders uit
+
+**Hoe het werkt:**
+
+- `StackNavigator.tsx`: Bepaalt welke schermen er zijn
+- `stackTheme.ts`: Bepaalt hoe alles eruit ziet
+- Knoppen: Je kan van scherm naar scherm navigeren
+
+**Waarom niet anders:**
+
+- **Drawer menu**: Beter voor veel menu-opties aan de zijkant
+- **Bottom tabs**: Beter voor schermen die even belangrijk zijn
+
+Screenshots:
+
+1. Home-scherm: ![alt text](image.png)
+2. Zoekresultaten: ![alt text](image-1.png)
+3. Instellingen-scherm: ![alt text](image-2.png)
+4. Profiel-scherm:![alt text](image-3.png)
+5. Demo video: <video controls src="20260331-2026-29.6592982.mp4" title="Title"></video>
+
+
+
 
 
 ## 11. Reflectie en leerpunten
@@ -199,6 +244,10 @@ Te reflecteren op:
 1. Wat ging goed in planning en uitvoering
 2. Wat moeilijk was en hoe dat is opgelost
 3. Wat ik de volgende keer anders zou doen
+
+**Specifieke punten per opdracht:**
+
+- **Opdracht 6 (Navigatie)**: Was Stack Navigation het juiste keuze? Waarom wel/niet? Hoe ervaart de gebruiker de navigatie?
 
 ## 12. Installatie en gebruik
 
