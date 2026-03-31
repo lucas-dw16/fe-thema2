@@ -63,22 +63,19 @@ Gebruikers helpen om hun schoolwerk beter te plannen, zodat ze minder stress heb
 
 ## 7. Voortgangsupdates
 
-{
+### Opdracht 2: React Navigation Drawer
 
-Opdracht 2: React Navigation Drawer Resultaat:
+Resultaat:
 
-Home : -> ![alt text](image.png)
-Instellingen : -> ![alt text](image-1.png)
-profiel : -> ![alt text](image-2.png)
+1. Drawer Navigation werkt met React Navigation
+2. Drie schermen zijn aanwezig: Home, Instellingen, Profiel
+3. Elk scherm heeft een eigen StyleSheet-bestand
 
-}
+Screenshots:
 
-{
-
-
-   
-
-}
+1. Home: ![Home scherm](image.png)
+2. Instellingen: ![Instellingen scherm](image-1.png)
+3. Profiel: ![Profiel scherm](image-2.png)
 
 ### Update 2026-03-31
 
@@ -91,7 +88,7 @@ profiel : -> ![alt text](image-2.png)
 Volgende stap:
 
 1. Kleine verbeteringen aan UI en content van de schermen
-2. Screenshots toevoegen aan deze README
+2. Reflectie-sectie aanvullen op het einde van de opdracht
 
 ## 8. Logboek (wat en waarom)
 
@@ -99,7 +96,7 @@ Volgende stap:
 | --- | --- | --- |
 | 2026-03-31 | Nieuwe README gemaakt met volledig projectvoorstel | Nodig voor de opdracht |
 | 2026-03-31 | Drawer Navigation toegevoegd met Home, Instellingen en Profiel | Voldoen aan opdracht 2 (React Navigation Drawer) |
-| 2026-03-31 | Betere code-structuur en duidelijkheid in code |
+| 2026-03-31 | Styles opgesplitst naar aparte files per scherm en drawer-thema | Betere code-structuur en duidelijkheid |
 
 
 
@@ -110,16 +107,17 @@ Wordt aangevuld tijdens de bouw van de app.
 
 Voorlopig:
 
-1. Tunnel (ngrok) werkte niet gped
+1. Tunnel (ngrok) werkte niet goed
 2. Oplossing: app draaien via LAN met npx expo start --host lan -c
 
 ## 10. Screenshots en video
 
-Wordt toegevoegd zodra de eerste schermen af zijn.
+Screenshots van de huidige versie:
 
-1. Screenshot Home-scherm: nog toe te voegen
-2. Screenshot Takenlijst: nog toe te voegen
-3. Korte demo-video: nog toe te voegen
+1. Home-scherm: ![Home scherm](image.png)
+2. Instellingen-scherm: ![Instellingen scherm](image-1.png)
+3. Profiel-scherm: ![Profiel scherm](image-2.png)
+4. Korte demo-video: nog toe te voegen 
 
 ## 11. Reflectie en leerpunten
 
@@ -169,7 +167,5 @@ In te dienen:
 
 1. Link naar de repository: https://github.com/lucas-dw16/fe-thema2
 2. Bijgewerkte README met voortgang, logboek en reflectie
-
--
 
 
