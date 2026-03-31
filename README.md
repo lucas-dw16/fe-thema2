@@ -63,7 +63,22 @@ Gebruikers helpen om hun schoolwerk beter te plannen, zodat ze minder stress heb
 
 ## 7. Voortgangsupdates
 
-Deze sectie wordt regelmatig bijgewerkt tijdens de ontwikkeling.
+{
+
+Opdracht 2: React Navigation Drawer Resultaat:
+
+Home : -> ![alt text](image.png)
+Instellingen : -> ![alt text](image-1.png)
+profiel : -> ![alt text](image-2.png)
+
+}
+
+{
+
+
+   
+
+}
 
 ### Update 2026-03-31
 
@@ -85,6 +100,8 @@ Volgende stap:
 | 2026-03-31 | Nieuwe README gemaakt met volledig projectvoorstel | Nodig voor de opdracht |
 | 2026-03-31 | Drawer Navigation toegevoegd met Home, Instellingen en Profiel | Voldoen aan opdracht 2 (React Navigation Drawer) |
 | 2026-03-31 | Betere code-structuur en duidelijkheid in code |
+
+
 
 
 ## 9. Problemen en uitdagingen
@@ -152,5 +169,7 @@ In te dienen:
 
 1. Link naar de repository: https://github.com/lucas-dw16/fe-thema2
 2. Bijgewerkte README met voortgang, logboek en reflectie
+
+-
 
 
