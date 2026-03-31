@@ -71,7 +71,7 @@ Deze sectie wordt regelmatig bijgewerkt tijdens de ontwikkeling.
 2. Doelgroep en hoofddoel vastgelegd
 3. Eerste versie van project-README uitgewerkt
 4. React Navigation Drawer geimplementeerd met 3 schermen: Home, Instellingen, Profiel
-5. Styling opgesplitst naar aparte style files per scherm
+5. Styling opgesplitst in aparte files
 
 Volgende stap:
 
