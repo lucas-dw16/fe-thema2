@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, Text, Pressable } from 'react-native';
-import type { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 
-import type { RootTabParamList } from '@/src/navigation/BottomTabNavigator';
+import type { RootStackParamList } from '@/src/navigation/StackNavigator';
 import { styles } from '@/src/screens/styles/HomeScreen.styles';
 
-type Props = BottomTabScreenProps<RootTabParamList, 'Home'>;
+type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
 
 export function HomeScreen({ navigation }: Props) {
   return (
@@ -13,12 +13,17 @@ export function HomeScreen({ navigation }: Props) {
       <Text style={styles.title}>Home</Text>
       <Text style={styles.subtitle}>Welkom bij School Planner.</Text>
       <Text style={styles.description}>
-        Gebruik de navigatiebalk onderaan om naar Instellingen en Profiel te gaan.
+        Gebruik de knoppen hieronder om naar andere schermen te gaan.
       </Text>
       <Pressable
         style={styles.button}
+        onPress={() => navigation.navigate('Instellingen')}>
+        <Text style={styles.buttonText}>Naar Instellingen</Text>
+      </Pressable>
+      <Pressable
+        style={[styles.button, { marginTop: 12 }]}
         onPress={() => navigation.navigate('Profiel')}>
-        <Text style={styles.buttonText}>Ga naar Profiel</Text>
+        <Text style={styles.buttonText}>Naar Profiel</Text>
       </Pressable>
     </View>
   );

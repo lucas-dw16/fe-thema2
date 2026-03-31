@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
-import { View, Text, Switch } from 'react-native';
+import { View, Text, Switch, Pressable } from 'react-native';
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 
+import type { RootStackParamList } from '@/src/navigation/StackNavigator';
 import { styles } from '@/src/screens/styles/SettingsScreen.styles';
 
-export function SettingsScreen() {
+type Props = NativeStackScreenProps<RootStackParamList, 'Instellingen'>;
+
+export function SettingsScreen({ navigation }: Props) {
   const [notificationsEnabled, setNotificationsEnabled] = useState(true);
 
   return (
@@ -26,6 +30,17 @@ export function SettingsScreen() {
       <Text style={styles.status}>
         Status: {notificationsEnabled ? 'Aan' : 'Uit'}
       </Text>
+
+      <Pressable
+        style={[styles.row, { marginTop: 24, backgroundColor: '#1F7A8C' }]}
+        onPress={() => navigation.navigate('Home')}>
+        <Text style={{ color: '#FFFFFF', fontWeight: '600' }}>Terug naar Home</Text>
+      </Pressable>
+      <Pressable
+        style={[styles.row, { marginTop: 12, backgroundColor: '#1F7A8C' }]}
+        onPress={() => navigation.navigate('Profiel')}>
+        <Text style={{ color: '#FFFFFF', fontWeight: '600' }}>Naar Profiel</Text>
+      </Pressable>
     </View>
   );
 }

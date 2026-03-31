@@ -37,7 +37,7 @@ Gebruikers helpen om hun schoolwerk beter te plannen, zodat ze minder stress heb
 ## 5. Technologie
 
 1. React Native met Expo
-2. React Navigation (Drawer + Bottom Tabs)
+2. React Navigation (Drawer + Bottom Tabs + Stack)
 3. TypeScript
 4. AsyncStorage (lokale opslag)
 
@@ -89,7 +89,21 @@ Wat is aangepast:
 
 1. App start nu met een Bottom Tab Navigator
 2. Home, Instellingen en Profiel zijn als tabs gekoppeld
-3. Navigatiebalk staat onderaan de
+3. Navigatiebalk staat onderaan de app
+
+### Opdracht 4: React Navigation Stack
+
+Resultaat:
+
+1. Stack Navigation werkt met React Navigation
+2. Drie schermen zijn aanwezig: Home, Instellingen, Profiel
+3. Elk scherm gebruikt een aparte StyleSheet-file
+
+Wat is aangepast:
+
+1. App start nu met een Native Stack Navigator
+2. Schermen zijn stapelbaar en navigeerbaar met terug-knop
+3. Headers hebben juiste styling met back button
 
 ### Update 2026-03-31
 
@@ -99,6 +113,7 @@ Wat is aangepast:
 4. React Navigation Drawer gemaakt met 3 schermen: Home, Instellingen, Profiel
 5. Styling opgesplitst in aparte files
 6. React Navigation Bottom gemaakt met 3 tabs: Home, Instellingen, Profiel
+7. React Navigation Stack gemaakt met 3 schermen stapelbaar
 
 Volgende stap:
 
@@ -113,6 +128,7 @@ Volgende stap:
 | 2026-03-31 | Drawer Navigation toegevoegd met Home, Instellingen en Profiel | Voldoen aan opdracht 2 (React Navigation Drawer) |
 | 2026-03-31 | Styles opgesplitst naar aparte files per scherm en drawer-thema | Betere code-structuur en duidelijkheid |
 | 2026-03-31 | Bottom Navigation toegevoegd met Home, Instellingen en Profiel | Voldoen aan opdracht 3 (React Navigation Bottom) |
+| 2026-03-31 | Stack Navigation toegevoegd met Home, Instellingen en Profiel | Voldoen aan opdracht 4 (React Navigation Stack) |
 
 
 
@@ -144,6 +160,13 @@ Opdracht 3: React Navigation Bottom
 2. Instellingen-scherm: ![alt text](image-5.png)
 3. Profiel-scherm: ![alt text](image-3.png)
 4. Korte demo-video: <video controls src="20260331-1917-57.5061422.mp4" title="Title"></video>
+
+Opdracht 4: React Navigation Stack
+
+1. Home-scherm: ![alt text](image.png)
+2. Instellingen-scherm: ![alt text](image-1.png)
+3. Profiel-scherm: ![alt text](image-2.png)
+4. Korte demo-video: <video controls src="20260331-1932-58.0011514.mp4" title="Title"></video>
 
 
 ## 11. Reflectie en leerpunten
