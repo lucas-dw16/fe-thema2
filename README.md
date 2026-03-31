@@ -6,7 +6,7 @@ Een eenvoudige app om schooltaken, toetsen en deadlines overzichtelijk bij te ho
 
 School Planner is een handige planner voor iedereen die op school zit.
 Je voegt taken toe per vak, zet er een deadline op en vinkt ze af zodra je klaar bent.
-Zo zie je in één kkeer wat nog moet gebeuren en wat al af is.
+Zo zie je in een keer wat nog moet gebeuren en wat al af is.
 
 Waarom dit een logisch idee is:
 
@@ -37,7 +37,7 @@ Gebruikers helpen om hun schoolwerk beter te plannen, zodat ze minder stress heb
 ## 5. Technologie
 
 1. React Native met Expo
-2. Expo Router
+2. React Navigation (Drawer)
 3. TypeScript
 4. AsyncStorage (lokale opslag)
 
@@ -46,13 +46,14 @@ Gebruikers helpen om hun schoolwerk beter te plannen, zodat ze minder stress heb
 ### Fase 1: Voorbereiding
 
 1. README en projectplan opstellen
-2. Schermen bepalen: Home, Taken, Instellingen
+2. Schermen bepalen: Home, Instellingen, Profiel
 
 ### Fase 2: Basisfunctionaliteit
 
-1. Taken aanmaken
-2. Takenlijst tonen
-3. Taken afvinken
+1. Drawer Navigation opzetten
+2. Home-scherm bouwen
+3. Instellingen-scherm bouwen
+4. Profiel-scherm bouwen
 
 ### Fase 3: Verbetering
 
@@ -69,16 +70,21 @@ Deze sectie wordt regelmatig bijgewerkt tijdens de ontwikkeling.
 1. App-idee gekozen
 2. Doelgroep en hoofddoel vastgelegd
 3. Eerste versie van project-README uitgewerkt
+4. React Navigation Drawer geimplementeerd met 3 schermen: Home, Instellingen, Profiel
+5. Styling opgesplitst naar aparte style files per scherm
 
 Volgende stap:
 
-1. Basis UI maken voor taken toevoegen en tonen
+1. Kleine verbeteringen aan UI en content van de schermen
+2. Screenshots toevoegen aan deze README
 
 ## 8. Logboek (wat en waarom)
 
-| Datum: 2026-03-31 | 
-| Wat gedaan: Nieuwe README gemaakt met volledig projectvoorstel | 
-| Waarom: Nodig voor de opdracht |
+| Datum | Wat gedaan | Waarom |
+| --- | --- | --- |
+| 2026-03-31 | Nieuwe README gemaakt met volledig projectvoorstel | Nodig voor de opdracht |
+| 2026-03-31 | Drawer Navigation toegevoegd met Home, Instellingen en Profiel | Voldoen aan opdracht 2 (React Navigation Drawer) |
+| 2026-03-31 | Betere code-structuur en duidelijkheid in code |
 
 
 ## 9. Problemen en uitdagingen
@@ -87,7 +93,8 @@ Wordt aangevuld tijdens de bouw van de app.
 
 Voorlopig:
 
-1. Nog niks
+1. Tunnel (ngrok) werkte niet gped
+2. Oplossing: app draaien via LAN met npx expo start --host lan -c
 
 ## 10. Screenshots en video
 
@@ -124,7 +131,7 @@ npm install
 ### App starten
 
 ```bash
-npx expo start
+npx expo start --host lan -c
 ```
 
 Daarna in de terminal:
