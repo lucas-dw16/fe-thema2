@@ -37,7 +37,7 @@ Gebruikers helpen om hun schoolwerk beter te plannen, zodat ze minder stress heb
 ## 5. Technologie
 
 1. React Native met Expo
-2. React Navigation (Drawer)
+2. React Navigation (Drawer + Bottom Tabs)
 3. TypeScript
 4. AsyncStorage (lokale opslag)
 
@@ -77,13 +77,28 @@ Screenshots:
 2. Instellingen: ![Instellingen scherm](image-1.png)
 3. Profiel: ![Profiel scherm](image-2.png)
 
+### Opdracht 3: React Navigation Bottom
+
+Resultaat:
+
+1. Bottom Navigation werkt met React Navigation
+2. Drie schermen zijn aanwezig: Home, Instellingen, Profiel
+3. Elk scherm gebruikt een aparte StyleSheet-file
+
+Wat is aangepast:
+
+1. App start nu met een Bottom Tab Navigator
+2. Home, Instellingen en Profiel zijn als tabs gekoppeld
+3. Navigatiebalk staat onderaan de
+
 ### Update 2026-03-31
 
 1. App-idee gekozen
 2. Doelgroep en hoofddoel vastgelegd
 3. Eerste versie van project-README uitgewerkt
-4. React Navigation Drawer geimplementeerd met 3 schermen: Home, Instellingen, Profiel
+4. React Navigation Drawer gemaakt met 3 schermen: Home, Instellingen, Profiel
 5. Styling opgesplitst in aparte files
+6. React Navigation Bottom gemaakt met 3 tabs: Home, Instellingen, Profiel
 
 Volgende stap:
 
@@ -97,6 +112,7 @@ Volgende stap:
 | 2026-03-31 | Nieuwe README gemaakt met volledig projectvoorstel | Nodig voor de opdracht |
 | 2026-03-31 | Drawer Navigation toegevoegd met Home, Instellingen en Profiel | Voldoen aan opdracht 2 (React Navigation Drawer) |
 | 2026-03-31 | Styles opgesplitst naar aparte files per scherm en drawer-thema | Betere code-structuur en duidelijkheid |
+| 2026-03-31 | Bottom Navigation toegevoegd met Home, Instellingen en Profiel | Voldoen aan opdracht 3 (React Navigation Bottom) |
 
 
 
@@ -114,10 +130,21 @@ Voorlopig:
 
 Screenshots van de huidige versie:
 
+Opdracht 2: React Navigation Drawer
+
 1. Home-scherm: ![Home scherm](image.png)
 2. Instellingen-scherm: ![Instellingen scherm](image-1.png)
 3. Profiel-scherm: ![Profiel scherm](image-2.png)
-4. Korte demo-video: nog toe te voegen 
+4. Korte video: <video controls src="20260331-1911-21.6484080.mp4" title="Title"></video>
+
+
+Opdracht 3: React Navigation Bottom
+
+1. Home-scherm: ![alt text](image-4.png)
+2. Instellingen-scherm: ![alt text](image-5.png)
+3. Profiel-scherm: ![alt text](image-3.png)
+4. Korte demo-video: <video controls src="20260331-1917-57.5061422.mp4" title="Title"></video>
+
 
 ## 11. Reflectie en leerpunten
 

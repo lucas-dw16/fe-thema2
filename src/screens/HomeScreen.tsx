@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, Text, Pressable } from 'react-native';
-import type { DrawerScreenProps } from '@react-navigation/drawer';
+import type { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
 
-import type { RootDrawerParamList } from '../navigation/DrawerNavigator';
+import type { RootTabParamList } from '@/src/navigation/BottomTabNavigator';
 import { styles } from '@/src/screens/styles/HomeScreen.styles';
 
-type Props = DrawerScreenProps<RootDrawerParamList, 'Home'>;
+type Props = BottomTabScreenProps<RootTabParamList, 'Home'>;
 
 export function HomeScreen({ navigation }: Props) {
   return (
@@ -13,7 +13,7 @@ export function HomeScreen({ navigation }: Props) {
       <Text style={styles.title}>Home</Text>
       <Text style={styles.subtitle}>Welkom bij School Planner.</Text>
       <Text style={styles.description}>
-        Gebruik het menu linksboven om naar Instellingen en Profiel te gaan.
+        Gebruik de navigatiebalk onderaan om naar Instellingen en Profiel te gaan.
       </Text>
       <Pressable
         style={styles.button}

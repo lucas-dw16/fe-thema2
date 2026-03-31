@@ -3,13 +3,13 @@ import 'react-native-gesture-handler';
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 
-import { DrawerNavigator } from '@/src/navigation/DrawerNavigator';
+import { BottomTabNavigator } from '@/src/navigation/BottomTabNavigator';
 
 export default function App() {
   return (
     <>
       <StatusBar style="auto" />
-      <DrawerNavigator />
+      <BottomTabNavigator />
     </>
   );
 }
