@@ -4,7 +4,12 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#F8FAFC',
-    padding: 24,
+    paddingHorizontal: 24,
+    paddingTop: 24,
+    paddingBottom: 12,
+  },
+  scrollContent: {
+    paddingBottom: 16,
   },
   title: {
     fontSize: 30,
@@ -15,7 +20,21 @@ export const styles = StyleSheet.create({
   subtitle: {
     fontSize: 15,
     color: '#334155',
+    marginBottom: 16,
+  },
+  section: {
+    backgroundColor: '#FFFFFF',
+    borderRadius: 14,
+    borderWidth: 1,
+    borderColor: '#E2E8F0',
+    padding: 14,
     marginBottom: 14,
+  },
+  sectionTitle: {
+    fontSize: 18,
+    fontWeight: '700',
+    color: '#0F172A',
+    marginBottom: 10,
   },
   input: {
     borderWidth: 1,
@@ -26,6 +45,13 @@ export const styles = StyleSheet.create({
     paddingVertical: 12,
     fontSize: 16,
     marginBottom: 12,
+  },
+  addTaskButton: {
+    backgroundColor: '#0F766E',
+    borderRadius: 12,
+    paddingVertical: 12,
+    alignItems: 'center',
+    marginBottom: 10,
   },
   searchButton: {
     backgroundColor: '#1F7A8C',
@@ -52,17 +78,98 @@ export const styles = StyleSheet.create({
     marginTop: 8,
     color: '#475569',
   },
-  list: {
+  filterRow: {
+    flexDirection: 'row',
+    gap: 8,
+    marginBottom: 10,
+  },
+  filterButton: {
     flex: 1,
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#CBD5E1',
+    backgroundColor: '#FFFFFF',
+    paddingVertical: 8,
+    alignItems: 'center',
+  },
+  filterButtonActive: {
+    backgroundColor: '#0EA5E9',
+    borderColor: '#0EA5E9',
+  },
+  filterButtonText: {
+    color: '#334155',
+    fontWeight: '600',
+  },
+  filterButtonTextActive: {
+    color: '#FFFFFF',
   },
   listContent: {
-    paddingBottom: 14,
+    gap: 10,
+  },
+  taskCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#F8FAFC',
+    borderWidth: 1,
+    borderColor: '#E2E8F0',
+    borderRadius: 12,
+    padding: 10,
+    marginBottom: 8,
+  },
+  taskCheckBox: {
+    width: 22,
+    height: 22,
+    borderRadius: 11,
+    borderWidth: 1,
+    borderColor: '#94A3B8',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 10,
+    backgroundColor: '#FFFFFF',
+  },
+  taskCheckDot: {
+    width: 10,
+    height: 10,
+    borderRadius: 5,
+    backgroundColor: 'transparent',
+  },
+  taskCheckDotDone: {
+    backgroundColor: '#0EA5E9',
+  },
+  taskTextBlock: {
+    flex: 1,
+  },
+  taskTitle: {
+    color: '#0F172A',
+    fontWeight: '700',
+  },
+  taskTitleDone: {
+    color: '#64748B',
+    textDecorationLine: 'line-through',
+  },
+  taskSubject: {
+    color: '#475569',
+    fontSize: 13,
+    marginTop: 2,
+  },
+  deleteTaskButton: {
+    marginLeft: 8,
+    backgroundColor: '#FEE2E2',
+    borderWidth: 1,
+    borderColor: '#FCA5A5',
+    borderRadius: 8,
+    paddingVertical: 6,
+    paddingHorizontal: 10,
+  },
+  deleteTaskButtonText: {
+    color: '#B91C1C',
+    fontSize: 12,
+    fontWeight: '700',
   },
   card: {
     backgroundColor: '#FFFFFF',
     borderRadius: 14,
     padding: 14,
-    marginBottom: 12,
     borderWidth: 1,
     borderColor: '#E2E8F0',
   },
@@ -96,7 +203,7 @@ export const styles = StyleSheet.create({
   navButtonsRow: {
     flexDirection: 'row',
     gap: 10,
-    marginTop: 10,
+    marginTop: 8,
   },
   navButton: {
     flex: 1,

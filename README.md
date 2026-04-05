@@ -41,6 +41,7 @@ Gebruikers helpen om hun schoolwerk beter te plannen, zodat ze minder stress heb
 3. TypeScript
 4. Axios voor API-calls
 5. NewsAPI voor nieuwsartikelen
+6. AsyncStorage voor lokaal bewaren van taken
 
 ## 6. Ontwikkelingsfase
 
@@ -124,6 +125,21 @@ Wat is aangepast:
 2. Axios toegevoegd voor newsapi 
 3. Private api-config in een apart bestand
 
+### Opdracht 8: Volgende functionaliteit
+
+Resultaat:
+
+1. Gebruiker kan taken toevoegen met taak + vak
+2. Gebruiker kan taken afvinken als klaar
+3. Gebruiker kan filteren op Alles, Open en Klaar
+4. Taken blijven bewaard op het toestel met AsyncStorage
+
+Wat is aangepast:
+
+1. Home-scherm uitgebreid met takenplanner
+2. AsyncStorage toegevoegd voor lokale opslag
+3. Filterknoppen toegevoegd voor snelle weergave van taken
+
 ### Update 2026-03-31
 
 1. App-idee gekozen
@@ -135,6 +151,13 @@ Wat is aangepast:
 7. React Navigation Stack gemaakt met 3 schermen
 8. Nieuwszoekmachine met NewsAPI gebouwd op het Home-scherm
 9. Stack Navigation gekozen
+
+### Update 2026-04-06
+
+1. Opdracht 8 gebouwd: takenplanner op Home-scherm
+2. Taken opslaan met AsyncStorage toegevoegd
+3. Filter op Alles/Open/Klaar toegevoegd
+4. README bijgewerkt met uitleg van de nieuwe feature
 
 Volgende stap:
 
@@ -152,6 +175,7 @@ Volgende stap:
 | 2026-03-31 | Stack Navigation toegevoegd met Home, Instellingen en Profiel | Voldoen aan opdracht 4 (React Navigation Stack) |
 | 2026-03-31 | NewsAPI zoekfunctie toegevoegd met axios en flatlistt | Voldoen aan opdracht 5 (Nieuwszoekmachine API) |
 | 2026-03-31 | Stack Navigation gekozen | Voldoen aan opdracht 6 (Navigatie-keuze) |
+| 2026-04-06 | Takenplanner toegevoegd met lokaal opslaan en filters | Voldoen aan opdracht 8 (Volgende functionaliteit) |
 
 
 
@@ -231,6 +255,15 @@ Screenshots:
 4. Profiel-scherm:![alt text](image-3.png)
 5. Demo video: <video controls src="20260331-2026-29.6592982.mp4" title="Title"></video>
 
+Opdracht 8: Volgende functionaliteit
+
+1. Taken toevoegen op Home: ![alt text](image.png)
+2. Filter Alles/Open/Klaar: alles: ![alt text](image-1.png) 
+ open: ![alt text](image-2.png)
+ klaar: ![alt text](image-3.png)
+3. Taken afvinken als klaar: ![alt text](image-4.png)
+4. Korte video: <video controls src="20260405-2352-48.1830421.mp4" title="Title"></video>
+
 
 
 
@@ -261,6 +294,12 @@ Te reflecteren op:
 
 ```bash
 npm install
+```
+
+Dependency voor de takenplanner:
+
+```bash
+npm install @react-native-async-storage/async-storage
 ```
 
 ### App starten
