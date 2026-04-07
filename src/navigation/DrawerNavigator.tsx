@@ -8,16 +8,20 @@ import { ProfileScreen } from '@/src/screens/ProfileScreen';
 import { drawerScreenOptions } from '@/src/navigation/styles/drawerTheme';
 
 export type RootDrawerParamList = {
+  // Beschikbare drawer schermen
   Home: undefined;
   Instellingen: undefined;
   Profiel: undefined;
 };
 
+// Maak de drawer navigator aan
 const Drawer = createDrawerNavigator<RootDrawerParamList>();
 
 export function DrawerNavigator() {
   return (
+    // Container voor navigatie
     <NavigationContainer>
+      {/* Drawer en schermen */}
       <Drawer.Navigator
         initialRouteName="Home"
         screenOptions={drawerScreenOptions}>

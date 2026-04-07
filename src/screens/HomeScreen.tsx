@@ -29,10 +29,13 @@ type TaskFilter = 'all' | 'open' | 'done';
 const TASK_STORAGE_KEY = '@school_planner_tasks';
 
 export function HomeScreen({ navigation }: Props) {
+  // State voor nieuws zoeken
   const [query, setQuery] = useState('');
   const [articles, setArticles] = useState<NewsArticle[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
+
+  // State voor taken
   const [taskTitle, setTaskTitle] = useState('');
   const [taskSubject, setTaskSubject] = useState('');
   const [tasks, setTasks] = useState<Task[] | null>(null);
@@ -55,6 +58,7 @@ export function HomeScreen({ navigation }: Props) {
   }, [taskFilter, tasks]);
 
   useEffect(() => {
+    // Haal opgeslagen taken op bij openen van het scherm
     async function loadTasks() {
       try {
         const savedTasks = await AsyncStorage.getItem(TASK_STORAGE_KEY);
@@ -76,6 +80,7 @@ export function HomeScreen({ navigation }: Props) {
   }, []);
 
   async function saveTasksToStorage(nextTasks: Task[]) {
+    // Sla taken direct op zodat ze niet verloren gaan
     try {
       await AsyncStorage.setItem(TASK_STORAGE_KEY, JSON.stringify(nextTasks));
     } catch {
@@ -160,6 +165,7 @@ export function HomeScreen({ navigation }: Props) {
       <ScrollView
         contentContainerStyle={styles.scrollContent}
         showsVerticalScrollIndicator={false}>
+        {/* Taken sectie */}
         <Text style={styles.title}>School Planner</Text>
         <Text style={styles.subtitle}>Voeg taken toe, vink ze af en zoek nieuws.</Text>
 
@@ -323,6 +329,7 @@ export function HomeScreen({ navigation }: Props) {
         </View>
       </ScrollView>
 
+      {/* Navigatie knoppen onderaan */}
       <View style={styles.navButtonsRow}>
         <Pressable
           style={styles.navButton}

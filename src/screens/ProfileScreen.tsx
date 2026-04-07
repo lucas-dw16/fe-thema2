@@ -10,7 +10,10 @@ type Props = NativeStackScreenProps<RootStackParamList, 'Profiel'>;
 export function ProfileScreen({ navigation }: Props) {
   return (
     <View style={styles.container}>
+      {/* Titel van het profielscherm */}
       <Text style={styles.title}>Profiel</Text>
+
+      {/* Basisinformatie van de gebruiker */}
       <View style={styles.card}>
         <Text style={styles.label}>Naam</Text>
         <Text style={styles.value}>Lucas de Wilde</Text>
@@ -22,6 +25,7 @@ export function ProfileScreen({ navigation }: Props) {
         <Text style={styles.value}>Beter overzicht houden op schooltaken</Text>
       </View>
 
+      {/* Snelle navigatie knoppen */}
       <Pressable
         style={[styles.card, { marginTop: 24, backgroundColor: '#1F7A8C', paddingVertical: 12 }]}
         onPress={() => navigation.navigate('Home')}>

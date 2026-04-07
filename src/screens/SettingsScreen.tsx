@@ -8,15 +8,18 @@ import { styles } from '@/src/screens/styles/SettingsScreen.styles';
 type Props = NativeStackScreenProps<RootStackParamList, 'Instellingen'>;
 
 export function SettingsScreen({ navigation }: Props) {
+  // Eenvoudige toggle voor herinneringen
   const [notificationsEnabled, setNotificationsEnabled] = useState(true);
 
   return (
     <View style={styles.container}>
+      {/* Titel en uitleg */}
       <Text style={styles.title}>Instellingen</Text>
       <Text style={styles.description}>
         Hier kun je basisinstellingen aanpassen voor je app.
       </Text>
 
+      {/* Rij met de schakelaar */}
       <View style={styles.row}>
         <Text style={styles.label}>Herinneringen aanzetten</Text>
         <Switch
@@ -31,6 +34,7 @@ export function SettingsScreen({ navigation }: Props) {
         Status: {notificationsEnabled ? 'Aan' : 'Uit'}
       </Text>
 
+      {/* Navigatie knoppen */}
       <Pressable
         style={[styles.row, { marginTop: 24, backgroundColor: '#1F7A8C' }]}
         onPress={() => navigation.navigate('Home')}>
