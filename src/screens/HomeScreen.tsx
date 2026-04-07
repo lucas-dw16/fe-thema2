@@ -35,22 +35,23 @@ export function HomeScreen({ navigation }: Props) {
   const [errorMessage, setErrorMessage] = useState('');
   const [taskTitle, setTaskTitle] = useState('');
   const [taskSubject, setTaskSubject] = useState('');
-  const [tasks, setTasks] = useState<Task[]>([]);
+  const [tasks, setTasks] = useState<Task[] | null>(null);
   const [taskFilter, setTaskFilter] = useState<TaskFilter>('all');
   const [taskErrorMessage, setTaskErrorMessage] = useState('');
-  const [isTasksLoaded, setIsTasksLoaded] = useState(false);
 
   const hasResults = useMemo(() => articles.length > 0, [articles]);
   const filteredTasks = useMemo(() => {
+    const taskList = tasks ?? [];
+
     if (taskFilter === 'open') {
-      return tasks.filter((task) => !task.done);
+      return taskList.filter((task) => !task.done);
     }
 
     if (taskFilter === 'done') {
-      return tasks.filter((task) => task.done);
+      return taskList.filter((task) => task.done);
     }
 
-    return tasks;
+    return taskList;
   }, [taskFilter, tasks]);
 
   useEffect(() => {
@@ -59,34 +60,28 @@ export function HomeScreen({ navigation }: Props) {
         const savedTasks = await AsyncStorage.getItem(TASK_STORAGE_KEY);
 
         if (!savedTasks) {
+          setTasks([]);
           return;
         }
 
         const parsedTasks = JSON.parse(savedTasks) as Task[];
         setTasks(parsedTasks);
       } catch {
+        setTasks([]);
         setTaskErrorMessage('Taken laden is mislukt.');
-      } finally {
-        setIsTasksLoaded(true);
       }
     }
 
     loadTasks();
   }, []);
 
-  useEffect(() => {
-    async function saveTasks() {
-      try {
-        await AsyncStorage.setItem(TASK_STORAGE_KEY, JSON.stringify(tasks));
-      } catch {
-        setTaskErrorMessage('Taken opslaan is mislukt.');
-      }
+  async function saveTasksToStorage(nextTasks: Task[]) {
+    try {
+      await AsyncStorage.setItem(TASK_STORAGE_KEY, JSON.stringify(nextTasks));
+    } catch {
+      setTaskErrorMessage('Taken opslaan is mislukt.');
     }
-
-    if (isTasksLoaded) {
-      saveTasks();
-    }
-  }, [isTasksLoaded, tasks]);
+  }
 
   function handleAddTask() {
     const trimmedTitle = taskTitle.trim();
@@ -104,24 +99,32 @@ export function HomeScreen({ navigation }: Props) {
       done: false,
     };
 
-    setTasks((previousTasks) => [newTask, ...previousTasks]);
+    setTasks((previousTasks) => {
+      const nextTasks = [newTask, ...(previousTasks ?? [])];
+      void saveTasksToStorage(nextTasks);
+      return nextTasks;
+    });
     setTaskTitle('');
     setTaskSubject('');
     setTaskErrorMessage('');
   }
 
   function toggleTaskDone(id: string) {
-    setTasks((previousTasks) =>
-      previousTasks.map((task) =>
+    setTasks((previousTasks) => {
+      const nextTasks = (previousTasks ?? []).map((task) =>
         task.id === id ? { ...task, done: !task.done } : task
-      )
-    );
+      );
+      void saveTasksToStorage(nextTasks);
+      return nextTasks;
+    });
   }
 
   function handleDeleteTask(id: string) {
-    setTasks((previousTasks) =>
-      previousTasks.filter((task) => task.id !== id)
-    );
+    setTasks((previousTasks) => {
+      const nextTasks = (previousTasks ?? []).filter((task) => task.id !== id);
+      void saveTasksToStorage(nextTasks);
+      return nextTasks;
+    });
   }
 
   async function handleSearch() {
