@@ -21,7 +21,7 @@ export function BottomTabNavigator() {
   return (
     // Container voor navigatie
     <NavigationContainer>
-      {/* Tabs en schermen */}
+      {/* Tabs en schermen, */}
       <Tab.Navigator initialRouteName="Home" screenOptions={bottomTabScreenOptions}>
         <Tab.Screen name="Home" component={HomeScreen} />
         <Tab.Screen name="Instellingen" component={SettingsScreen} />
